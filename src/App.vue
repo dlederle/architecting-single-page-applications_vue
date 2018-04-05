@@ -1,17 +1,27 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {articleService} from './domain/ArticleService'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+  },
+  mounted() {
+    const testArticle = {
+      author: "Dr. Seuss",
+      title: "Cat in the Hat"
+    }
+    console.log("I have mounted")
+    const newArticle = articleService.createArticle(testArticle)
+    console.log(newArticle)
+    const likedArticle = articleService.updateLikes(newArticle, 1)
+    console.log(likedArticle)
+
   }
 }
 </script>
