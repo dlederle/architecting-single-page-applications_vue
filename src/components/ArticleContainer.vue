@@ -1,8 +1,8 @@
 <script>
 import ArticleComponent from "./ArticleComponent";
 
-import { ArticleService } from "../domain/ArticleService";
-import { ArticleStore } from "../store/ArticleStore";
+import { articleService } from "../domain/ArticleService";
+import { articleStore } from "../store/ArticleStore";
 
 export default {
   components: { ArticleComponent },
@@ -13,15 +13,15 @@ export default {
     },
   },
   methods: {
-    likeArticle(article) {
-      const updatedArticle = this.articleService.updateLikes(
-        article,
-        article.likes + 1
+    likeArticle(e) {
+      const updatedArticle = articleService.updateLikes(
+        this.article,
+        this.article.likes + 1
       );
-      ArticleStore.dispatch("UPDATE_ARTICLE", updatedArticle);
+      articleStore.updateArticle(updatedArticle);
     },
-    removeArticle(article) {
-      ArticleStore.dispatch("REMOVE_ARTICLE");
+    removeArticle(e) {
+      articleStore.removeArticle(this.article);
     },
   },
 };
@@ -30,9 +30,9 @@ export default {
 <template lang="html">
   <div>
     <ArticleComponent
-      article="article"
-      likeArticle="likeArticle"
-      removeArticle="removeArticle"
+      :article="article"
+      :likeArticle="likeArticle"
+      :deleteArticle="removeArticle"
     />
   </div>
 </template>

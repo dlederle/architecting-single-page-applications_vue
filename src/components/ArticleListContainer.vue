@@ -4,16 +4,23 @@ import { articleStore } from "../store/ArticleStore";
 
 export default {
   components: { ArticleListComponent },
-  computed: {
-    articles() {
-      return articleStore.getArticles();
-    },
+  // Not sure if this is the best equivalent to componentWillUnmount
+  beforeDestroyed() {
+    articleStore.unsubscribe(this.subscriber);
+  },
+  data() {
+    return {
+      articles: [],
+      subscriber: articleStore.subscribe(articles => {
+        this.articles = articles;
+      }),
+    };
   },
 };
 </script>
 
 <template lang="html">
-    <ArticleListComponent articles="articles" />
+  <ArticleListComponent :articles="articles" />
 </template>
 
 

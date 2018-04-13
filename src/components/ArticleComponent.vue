@@ -1,4 +1,5 @@
 <script>
+// eslint-disable-next-line no-unused-vars
 import * as articleUiService from "../services/ArticleUiService";
 export default {
   props: {
@@ -15,14 +16,17 @@ export default {
       type: Function,
     },
   },
+  methods: {
+    displayAuthor: articleUiService.displayAuthor,
+  },
 };
 </script>
 
 <template lang="html">
   <div>
-    <h3>{article.title}</h3>
-    <p>{articleUiService.displayAuthor(article.author)}</p>
-    <p>{article.likes}</p>
+    <h3>{{ article.title }}</h3>
+    <p>{{ displayAuthor(article.author) }}</p>
+    <p>{{ article.likes }}</p>
     <button
       type="button"
       @click="likeArticle"

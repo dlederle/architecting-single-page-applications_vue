@@ -11,7 +11,10 @@ export default {
 
 <template lang="html">
   <div>
-    <ArticleContainer v-for="article in articles" key="article.id" article="article"/>
+    <ArticleContainer
+      v-for="article in articles"
+      :key="article.id"
+      :article="article"/>
   </div>
 </template>
 

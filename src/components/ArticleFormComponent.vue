@@ -1,8 +1,5 @@
 <script>
-const onSubmit = submitHandler => event => {
-  event.preventDefault();
-  submitHandler(event);
-};
+// eslint-disable-next-line no-unused-vars
 
 export default {
   props: {
@@ -11,14 +8,20 @@ export default {
     // changeArticleTitle: Function,
     // changeArticleAuthor: Function,
   },
-  methods: {},
+  methods: {
+    onSubmit(e) {
+      e.preventDefault();
+      this.submitForm(e);
+    },
+  },
 };
+// onSubmit(submitForm)"
 </script>
 
 <template lang="html">
   <form
     noValidate
-    @submit="onSubmit(submitForm)"
+    @submit="onSubmit"
   >
   <div>
     <label htmlFor="article-title">Title</label>

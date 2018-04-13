@@ -29,7 +29,7 @@ export default {
     //   console.log("Changing author!");
     //   console.log(event);
     // },
-    submitForm(event) {
+    submitForm() {
       const articleTitle = this.formData.articleTitle.value;
       const articleAuthor = this.formData.articleAuthor.value;
 
@@ -42,7 +42,7 @@ export default {
           author: articleAuthor,
         });
         if (newArticle) {
-          articleStore.dispatch("ADD_ARTICLE", newArticle);
+          articleStore.addArticle(newArticle);
         }
         this.clearForm();
       } else {
