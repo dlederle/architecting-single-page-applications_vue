@@ -14,7 +14,8 @@
   "dependencies": {
     "ramda": "^0.25.0",
     "uuid": "^3.2.1",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
@@ -24,14 +25,19 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
+    "eslint": "^4.19.1",
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-vue": "^4.4.0",
+    "prettier": "^1.12.0",
     "vue-jest": "2.3.x",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
-    "presets": ["@vue/app"]
+    "presets": [
+      "@vue/app"
+    ]
   },
   "eslintConfig": {
     "root": true,

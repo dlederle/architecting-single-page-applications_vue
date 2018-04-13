@@ -1,28 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <ArticleFormContainer />
+    <ArticleListContainer />
   </div>
 </template>
 
 <script>
-import {articleService} from './domain/ArticleService'
-
+import ArticleFormContainer from './components/ArticleFormContainer'
+import ArticleListContainer from './components/ArticleListContainer'
 export default {
   name: 'app',
   components: {
+    ArticleListContainer,
+    ArticleFormContainer
   },
-  mounted() {
-    const testArticle = {
-      author: "Dr. Seuss",
-      title: "Cat in the Hat"
-    }
-    console.log("I have mounted")
-    const newArticle = articleService.createArticle(testArticle)
-    console.log(newArticle)
-    const likedArticle = articleService.updateLikes(newArticle, 1)
-    console.log(likedArticle)
-
-  }
 }
 </script>
 
