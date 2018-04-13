@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import ArticleFormContainer from './components/ArticleFormContainer'
-import ArticleListContainer from './components/ArticleListContainer'
+import ArticleFormContainer from "./components/ArticleFormContainer";
+import ArticleListContainer from "./components/ArticleListContainer";
 export default {
-  name: 'app',
+  name: "app",
   components: {
     ArticleListContainer,
-    ArticleFormContainer
+    ArticleFormContainer,
   },
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -1,7 +1,7 @@
-import ArticleService from 'ArticleService';
+import ArticleService from "ArticleService";
 
-describe('@domain/ArticleService', () => {
-  it('passes the test', () => {
+describe("@domain/ArticleService", () => {
+  it("passes the test", () => {
     expect(1).toEqual(1);
-  })
-})
+  });
+});

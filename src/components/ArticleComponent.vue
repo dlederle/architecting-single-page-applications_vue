@@ -1,5 +1,5 @@
 <script>
-import * as articleUiService from '../services/ArticleUiService'
+import * as articleUiService from "../services/ArticleUiService";
 export default {
   props: {
     article: {
@@ -14,8 +14,8 @@ export default {
       required: true,
       type: Function,
     },
-  }
-}
+  },
+};
 </script>
 
 <template lang="html">

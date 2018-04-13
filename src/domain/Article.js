@@ -1,7 +1,7 @@
 // @flow
 export type Article = {
-  +id: string;
-  +likes: number;
-  +title: string;
-  +author: string;
-}
+  +id: string,
+  +likes: number,
+  +title: string,
+  +author: string,
+};
