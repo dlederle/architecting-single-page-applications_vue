@@ -1,1 +1,4 @@
-//TODO Type defs here
+// @flow
+import type { Article } from "../domain/Article";
+
+export type ArticleState = Article[];
