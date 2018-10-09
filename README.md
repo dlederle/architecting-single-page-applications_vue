@@ -26,7 +26,7 @@ In `ArticleListContainer`, the React version unsubscribed on `componentWillUnmou
 I chose `beforeDestroyed` as the closest Vue equivalent.
 For this usecase they seem equivalent, but I could imagine there might be other situations where I would need to do further reading on the precise differences.
 
-#Takeaways
+# Takeaways
 
 I was very impressed with the separation of concerns this architecture gives by pulling domain logic out of the views themselves.
 
